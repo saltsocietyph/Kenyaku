@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_pattern"
+    tools:context=".ChooseACategory">
+
+    <ImageView
+        android:id="@+id/kenyakuHeader"
+        android:layout_width="300dp"
+        android:layout_height="79dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.043"
+        app:srcCompat="@drawable/kenyaku_header_3" />
+
+    <ImageView
+        android:id="@+id/kenyaku_title"
+        android:layout_width="181dp"
+        android:layout_height="33dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/kenyakuHeader"
+        app:layout_constraintEnd_toEndOf="@+id/kenyakuHeader"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="@+id/kenyakuHeader"
+        app:layout_constraintTop_toTopOf="@+id/kenyakuHeader"
+        app:layout_constraintVertical_bias="0.394"
+        app:srcCompat="@drawable/kenyaku_title" />
+
+    <TextView
+        android:id="@+id/subtitle"
+        android:layout_width="127dp"
+        android:layout_height="19dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text="Choose a Goal Type"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_light"
+        app:layout_constraintBottom_toBottomOf="@+id/kenyakuHeader"
+        app:layout_constraintEnd_toEndOf="@+id/kenyakuHeader"
+        app:layout_constraintStart_toStartOf="@+id/kenyakuHeader" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="304dp"
+        android:layout_height="321dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/kenyakuHeader">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/justCashIcon"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/money"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="105dp" />
+
+            <TextView
+                android:id="@+id/description1"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:text="Just saving money until I feel like spending it."
+                android:textAlignment="center" />
+
+            <Button
+                android:id="@+id/justCashBtn"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/button"
+                android:backgroundTint="@android:color/holo_green_light"
+                android:onClick="justCashGoal"
+                android:text="Just Cash"
+                android:textColor="@android:color/background_light"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:id="@+id/zigzagLine1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/zigzag1"
+                    android:layout_width="157dp"
+                    android:layout_height="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/zigzag"
+                    android:backgroundTint="@android:color/holo_green_light" />
+
+                <ImageView
+                    android:id="@+id/zigzag2"
+                    android:layout_width="157dp"
+                    android:layout_height="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/zigzag"
+                    android:backgroundTint="@android:color/holo_green_light" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/materialIcon"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/ps4"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="105dp" />
+
+            <TextView
+                android:id="@+id/description2"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:text="I wanna buy something but its too expensive."
+                android:textAlignment="center" />
+
+            <Button
+                android:id="@+id/materialBtn"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/button"
+                android:backgroundTint="@android:color/holo_orange_dark"
+                android:onClick="materialGoal"
+                android:text="Material"
+                android:textColor="@android:color/background_light"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:id="@+id/zigzagLine2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/zigzag3"
+                    android:layout_width="157dp"
+                    android:layout_height="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/zigzag"
+                    android:backgroundTint="@android:color/holo_orange_dark" />
+
+                <ImageView
+                    android:id="@+id/zigzag4"
+                    android:layout_width="157dp"
+                    android:layout_height="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/zigzag"
+                    android:backgroundTint="@android:color/holo_orange_dark" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/eventIcon"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/spotlights"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="105dp" />
+
+            <TextView
+                android:id="@+id/description3"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:text="Saving for rare ocassions so I won't have regrets."
+                android:textAlignment="center" />
+
+            <Button
+                android:id="@+id/eventButton"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/button"
+                android:backgroundTint="@android:color/holo_red_light"
+                android:onClick="eventGoal"
+                android:text="Event"
+                android:textColor="@android:color/background_light"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:id="@+id/zigzagLine3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/zigzag5"
+                    android:layout_width="157dp"
+                    android:layout_height="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/zigzag"
+                    android:backgroundTint="@android:color/holo_red_light" />
+
+                <ImageView
+                    android:id="@+id/zigzag6"
+                    android:layout_width="157dp"
+                    android:layout_height="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/zigzag"
+                    android:backgroundTint="@android:color/holo_red_light" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/cancelBtn"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_weight="1"
+        android:background="@drawable/button"
+        android:backgroundTint="@android:color/holo_red_dark"
+        android:onClick="cancel"
+        android:text="Cancel"
+        android:textColor="@android:color/background_light"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView" />
+
+</android.support.constraint.ConstraintLayout>
