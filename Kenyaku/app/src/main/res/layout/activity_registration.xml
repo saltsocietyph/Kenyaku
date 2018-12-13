@@ -56,7 +56,7 @@
     <ScrollView
         android:id="@+id/scrollView"
         android:layout_width="match_parent"
-        android:layout_height="322dp"
+        android:layout_height="429dp"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:layout_marginTop="10dp"
@@ -136,6 +136,22 @@
                 android:textColorHint="@android:color/darker_gray"
                 android:textSize="16sp" />
 
+            <EditText
+                android:id="@+id/phoneNumberText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="4dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="Phone Number"
+                android:inputType="number|phone"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textColorHint="@android:color/darker_gray"
+                android:textSize="16sp" />
+
             <Button
                 android:id="@+id/submitBtn"
                 android:layout_width="match_parent"
@@ -145,6 +161,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_weight="1"
                 android:background="@drawable/button"
+                android:backgroundTint="@android:color/holo_purple"
                 android:onClick="submit"
                 android:text="Submit"
                 android:textColor="@android:color/background_light" />
@@ -158,6 +175,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_weight="1"
                 android:background="@drawable/button"
+                android:backgroundTint="@android:color/holo_red_dark"
                 android:onClick="cancel"
                 android:text="Cancel"
                 android:textColor="@android:color/background_light" />
