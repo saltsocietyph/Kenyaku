@@ -126,8 +126,8 @@ public class Registration extends AppCompatActivity {
             public void onComplete(@NonNull Task<Void> task) {
                 if(task.isSuccessful()) {
                     // Redirect to Confirm Email Page
-                    String message = "Account created!";
-                    sendSms(message, phoneNumber);
+                    // String message = "Account created!";
+                    // sendSms(message, phoneNumber);
 
                     Intent confirmEmail = new Intent (getApplicationContext(), ConfirmEmail.class);
                     startActivity(confirmEmail);
@@ -154,6 +154,9 @@ public class Registration extends AppCompatActivity {
                 username = usernameText.getText().toString();
                 password = pwText.getText().toString();
                 phoneNumber = phoneNumberText.getText().toString();
+
+                String message = "Account created!";
+                sendSms(message, phoneNumber);
 
                 createUser();
             } else {
@@ -183,6 +186,9 @@ public class Registration extends AppCompatActivity {
                 != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.SEND_SMS},
                     1);
+
+            SmsManager smsManager = SmsManager.getDefault();
+            smsManager.sendTextMessage(number, null, message, sentPi, deliveredPi);
         } else {
             SmsManager smsManager = SmsManager.getDefault();
             smsManager.sendTextMessage(number, null, message, sentPi, deliveredPi);
